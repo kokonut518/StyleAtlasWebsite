@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAtlas - Discover Your Style Beyond Borders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="styleatlas-logo.png" alt="StyleAtlas Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#upload">Upload Photo</a></li>
+                <li><a href="#search">Search Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="world-photos" class="section">
+            <h2>Recently uploaded</h2>
+            <div id="photo-scroll-container">
+                <div id="photo-scroll-row1" class="photo-scroll-row"></div>
+                <div id="photo-scroll-row2" class="photo-scroll-row"></div>
+                <div id="photo-scroll-row3" class="photo-scroll-row"></div>
+            </div>
+        </div>
+        </section>
+
+        <div id="upload" class="section">
+            <h2>Share Your Style</h2>
+            <form id="upload-form">
+                <input type="file" id="photo-file" accept="image/*" style="display: none;">
+                <input type="text" id="country" placeholder="What country do you live in?" required>
+                <button type="button" id="upload-button">Upload Your Photo</button>
+            </form>
+        </div>
+
+        <section id="search">
+            <h2>Find Your Inspo</h2>
+            <input type="text" id="search-country" placeholder="Enter country name">
+            <button id="search-button">Search</button>
+        </section>
+
+        <section id="results">
+            <h2>Search Results</h2>
+            <div id="photo-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 StyleAtlas - Discover Your Style Beyond Borders</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

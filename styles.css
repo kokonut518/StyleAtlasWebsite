@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #000; /* Changed from #333 to #000 for black */
+    color: #fff;
+    padding: 0.001rem;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+header nav ul li a { /* Targeting the header navigation links */
+    font-family: 'Playfair Display', serif !important; /* Apply the elegant font */
+    font-weight: 300 !important; /* Ensure the font is bold */
+    text-transform: none !important; /* Remove any text transformation */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+}
+
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove the margin for the last item */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#upload {
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px;
+}
+
+#upload h2 {
+    margin-top: 0;
+}
+
+#upload h2,
+#search h2,
+#results h2,
+#world-photos h2 {
+    font-family: 'Playfair Display', serif; /* Apply the elegant font */
+    font-weight: 700; /* Bold for more elegance */
+}
+
+#upload-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#country {
+    margin-bottom: 10px;
+}
+
+#upload-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display', serif !important; /* Apply the elegant font */
+    font-weight: 300 !important; /* Ensure boldness is applied */
+}
+
+#upload-button:hover {
+    background-color: #333;
+}
+
+form {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+/* Apply similar styles to the "Search Photos by Country" section */
+#search {
+    background-color: #f0f0f0; /* Same light grey background */
+    padding: 20px;
+    border-radius: 10px; /* Same rounded corners */
+    margin-bottom: 20px;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-country {
+    margin-bottom: 10px; /* Add some space below the input field */
+}
+
+input, button {
+    border-radius: 5px; /* Rounded corners for inputs and buttons */
+}
+
+button {
+    background-color: #000; /* Changed from #333 to #000 to match header */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333; /* Changed hover color to dark gray */
+}
+
+#photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #000; /* Changed from #333 to #000 to match header */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    height: 10px; /* Set a fixed height, adjust as needed */
+    width: 100%;
+
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* new stuff for aesthetics */
+/* Add this to set a taller height for the "Enter country" input */
+#country {
+    height: 20px; /* Adjust the value to your desired height */
+    font-size: 14px; /* Optional: increase font size to match the larger box */
+    width: 97%; /* Make it span the same width as the "Enter country name" box */
+    padding: 10px; /* Optional: increase padding to make the input box more comfortable to use */
+    font-family: 'Playfair Display', serif !important; /* Apply the elegant font */
+    font-weight: 300 !important; /* Ensure boldness is applied */
+}
+
+#search-country {
+    height: 20px; /* Adjust the value to your desired height */
+    font-size: 14px; /* Optional: increase font size to match the larger box */
+    width: 97%; /* Make it span the same width as the "Enter country name" box */
+    padding: 10px; /* Optional: increase padding to make the input box more comfortable to use */
+    font-family: 'Playfair Display', serif !important; /* Apply the elegant font */
+    font-weight: 300 !important; /* Ensure boldness is applied */
+}
+
+#search-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-family: 'Playfair Display', serif !important; /* Apply the elegant font */
+    font-weight: 300 !important; /* Ensure boldness is applied */
+}
+
+/* new stuff for display */
+#photo-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.photo-scroll-row {
+    display: flex;
+    animation: scroll 60s linear infinite;
+    margin-bottom: 10px;
+}
+
+.photo-scroll-row:nth-child(2) {
+    animation-duration: 80s;
+}
+
+.photo-scroll-row:nth-child(3) {
+    animation-duration: 70s;
+}
+
+.scroll-photo-item {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.scroll-photo-item img {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
